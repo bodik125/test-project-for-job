@@ -1,13 +1,13 @@
-import { Schema, SchemaFactory } from "@nestjs/mongoose";
-import { Document, Promise } from "mongoose";
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Document } from "mongoose";
 
 export type GroupDocument = group & Document
 
 @Schema()
 export class group {
-    @Promise()
+    @Prop()
     name: string
-    @Promise({type: Array})
+    @Prop({type: Array})
     posts: string
 }
 
